@@ -60,6 +60,7 @@ elseif(CMAKE_HOST_SYSTEM_NAME STREQUAL "Linux")
         set_target_properties(IUP_LIBRARY PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/lib/linux-x64/libiup.a)
         target_link_libraries(${TARGET_NAME} PUBLIC IUP_LIBRARY)
 
+        #TODO: CHeck correkt building on LInux
         target_link_libraries(${TARGET_NAME} PUBLIC gtk3 gdk3)
         target_link_libraries(${TARGET_NAME} PUBLIC gdk_pixbuf-2.0)
         target_link_libraries(${TARGET_NAME} PUBLIC pangocairo-1.0)
