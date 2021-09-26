@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\hello-cmake.dir/objects.a
-C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\hello-cmake.dir/objects.a @CMakeFiles\hello-cmake.dir\objects1.rsp
-C:\msys64\mingw64\bin\g++.exe -Wl,--whole-archive CMakeFiles\hello-cmake.dir/objects.a -Wl,--no-whole-archive -o hello-cmake.exe -Wl,--out-implib,libhello-cmake.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\hello-cmake.dir\linklibs.rsp
