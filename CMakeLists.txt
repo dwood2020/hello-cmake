@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 3.15)
 
 # setting up a project
 project(hello-cmake VERSION 1.0
-        DESCRIPTION "CMake learning project"
+        DESCRIPTION "Minimal project to get started with CMake."
         LANGUAGES C CXX)
 
 # specify C++11 standard
@@ -18,26 +18,20 @@ set(TARGET_NAME ${CMAKE_PROJECT_NAME})
 # set helloclass "module" path
 set (HELLO_PATH hello)
 
-
+# add the executable target
 add_executable(${TARGET_NAME} hello.cpp)
 
+# add the "hello" subdirectory
 add_subdirectory(${HELLO_PATH})
 
 
-# TODO: use find_library to add third-party libs.
-# TODO: Find out how this works. 
 #find_library(IUP_LIBRARY 
 #        NAMES ${CMAKE_STATIC_LIBRARY_PREFIX}iup${CMAKE_STATIC_LIBRARY_SUFFIX} 
 #        HINTS ${CMAKE_SOURCE_DIR}/lib/iup)
 
 
-
+# add an additional include directory
 target_include_directories(${TARGET_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/lib/include)
-
-
-# NOTE This does not work
-#set(IUP_LIBRARY_PATH ${CMAKE_SOURCE_DIR}/lib/iup/libiup.a)
-#target_link_libraries(${TARGET_NAME} PUBLIC ${IUP_LIBRARY})
 
 
 add_library(IUP_LIBRARY STATIC IMPORTED)
