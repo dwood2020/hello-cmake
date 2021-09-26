@@ -37,7 +37,7 @@ message("CMAKE HOST SYTEM NAME: " ${CMAKE_HOST_SYSTEM_NAME})
 if (CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows")
         if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")                
                 # IUP library for MinGW
-                set_target_properties(IUP_LIBRARY PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/lib/iup/libiup.a)
+                set_target_properties(IUP_LIBRARY PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/lib/windows-x64/libiup.a)
                 target_link_libraries(${TARGET_NAME} PUBLIC IUP_LIBRARY)
 
                 # additional libraries required for IUP on MinGW
@@ -49,7 +49,7 @@ if (CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows")
                 target_link_libraries(${TARGET_NAME} PUBLIC ole32)
 
         elseif(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
-                set_target_properties(IUP_LIBRARY PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/lib/iup/iup.lib)
+                set_target_properties(IUP_LIBRARY PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/lib/windows-x64/iup.lib)
                 target_link_libraries(${TARGET_NAME} PUBLIC IUP_LIBRARY)
 
                 target_link_libraries(${TARGET_NAME} PUBLIC comctl32)
