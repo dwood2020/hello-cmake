@@ -57,14 +57,17 @@ if (CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows")
 
 elseif(CMAKE_HOST_SYSTEM_NAME STREQUAL "Linux")
         # currently only GCC is supported on Linux:
+
         #set_target_properties(IUP_LIBRARY PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/lib/linux-x64/libiup.a)
         #target_link_libraries(${TARGET_NAME} PUBLIC IUP_LIBRARY)        
 
+        #TODO: This is a new function (avail. since 3.13) which "should be avoided" - see into this!
         target_link_directories(${TARGET_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/lib/linux-x64)
         target_link_libraries(${TARGET_NAME} PUBLIC iup)
 
         target_link_libraries(${TARGET_NAME} PUBLIC dl)
 
+        # includes for direct usage of GTK3 - unused
         #target_link_libraries(${TARGET_NAME} PUBLIC gtk3 gdk3)
         #target_link_libraries(${TARGET_NAME} PUBLIC gdk_pixbuf-2.0)
         #target_link_libraries(${TARGET_NAME} PUBLIC pangocairo-1.0)
