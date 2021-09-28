@@ -15,8 +15,7 @@ int main(int argc, char** argv) {
     // now we say hello from IUP
     IupOpen(&argc, &argv);
     IupMessage("Hello IUP", "Hello World from IUP!! :)");
-
     IupClose();
-    std::cin.get();
+
     return 0;
 }
