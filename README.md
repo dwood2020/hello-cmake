@@ -10,7 +10,7 @@ Minimal project to get started with CMake.
 
 --- 
 ### Usage
-This project is 64-bit only. For simplicity, IUP binary libs are included in this repo.
+This project is 64-bit only. For simplicity, IUP binary libs are included in this repo for Windows and Linux.
 
 #### Windows - MinGW
 ```
@@ -28,7 +28,16 @@ cmake -G "Visual Studio 16 2019" -A x64 ..
 cmake --build .
 ```
 
+#### Linux - GCC
+```
+mkdir build
+cd build
+cmake -G "Unix Makefiles" ..
+cmake --build .
+```
 
+#### MacOS 10.X 
+TBD
 
 
 
