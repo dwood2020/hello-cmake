@@ -10,7 +10,7 @@ Minimal project to get started with CMake.
 
 --- 
 ### Usage
-This project is 64-bit only. For simplicity, IUP binary libs are included in this repo for Windows and Linux.
+For simplicity, 64-bit IUP binary libs are included in this repo for Windows and Linux.
 
 #### Windows - MinGW
 ```
@@ -36,8 +36,6 @@ cmake -G "Unix Makefiles" ..
 cmake --build .
 ```
 
-#### MacOS 10.X 
-TBD
 
 
 
