@@ -1,0 +1,31 @@
+{
+    "version": 3,
+    "configurePresets": [
+        {
+            "name": "mingw-preset",
+            "displayName": "MinGW Preset",
+            "generator": "MinGW Makefiles",
+            "binaryDir": "${sourceDir}/build/mingw"
+        },
+
+        {
+            "name": "msvc-x64-preset",
+            "displayName": "MSVC 64-bit Preset",
+            "generator": "Visual Studio 17 2022",
+            "binaryDir": "${sourceDir}/build/msvc-x64",
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            }
+        }
+    ],
+
+    "buildPresets": [
+        {
+            "name": "mingw-build-preset",
+            "displayName":"MinGW Build Preset",
+            "configurePreset": "mingw-preset",
+            "jobs": 8
+        }
+    ]
+}
