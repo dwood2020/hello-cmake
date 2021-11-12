@@ -22,10 +22,20 @@
 
     "buildPresets": [
         {
-            "name": "mingw-build-preset",
-            "displayName":"MinGW Build Preset",
+            "name": "mingw-build-debug-preset",
+            "displayName":"MinGW Debug Build Preset",
             "configurePreset": "mingw-preset",
+            "configuration": "Debug",
+            "jobs": 8
+        },
+
+        {
+            "name": "mingw-build-release-preset",
+            "displayName":"MinGW Release Build Preset",
+            "configurePreset": "mingw-preset",
+            "configuration": "Release",
             "jobs": 8
         }
+        
     ]
 }
