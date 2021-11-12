@@ -16,6 +16,20 @@
             "architecture": {
                 "value": "x64",
                 "strategy": "external"
+            }         
+        },
+
+        {
+            "name": "vs-ninja-x64-debug",
+            "displayName": "Ninja Build 64-bit for Visual Studio",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
             }
         }
     ],
@@ -34,6 +48,12 @@
             "displayName":"MinGW Release Build Preset",
             "configurePreset": "mingw-preset",
             "configuration": "Release",
+            "jobs": 8
+        },
+
+        {
+            "name": "vs-ninja-x64-debug-build",
+            "configurePreset": "vs-ninja-x64-debug",
             "jobs": 8
         }
         
