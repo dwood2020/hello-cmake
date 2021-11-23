@@ -9,10 +9,10 @@
         },
 
         {
-            "name": "msvc-x64-preset",
+            "name": "msvc-x64",
             "displayName": "MSVC 64-bit Preset",
             "generator": "Visual Studio 17 2022",
-            "binaryDir": "${sourceDir}/build/msvc-x64",
+            "binaryDir": "${sourceDir}/build/${presetName}",
             "architecture": {
                 "value": "x64",
                 "strategy": "external"
