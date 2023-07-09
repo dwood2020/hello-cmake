@@ -18,9 +18,11 @@ set(MAIN_TARGET ${CMAKE_PROJECT_NAME})
 set(LIB_HELLO_TARGET hello)
 set(LIB_IUP_TARGET iup)
 
-
+# Include the subdirectories and link the lib targets to the exe target.
 add_subdirectory(main)
 add_subdirectory(hello)
+add_subdirectory(vendor)
 
 target_link_libraries(${MAIN_TARGET} PRIVATE ${LIB_HELLO_TARGET})
+target_link_libraries(${MAIN_TARGET} PRIVATE ${LIB_IUP_TARGET})
 

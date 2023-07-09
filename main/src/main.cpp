@@ -1,7 +1,7 @@
 #include <iostream>
 #include "HelloClass.h"
 
-// #include <iup/iup.h>
+#include "iup/iup.h"
 
 
 int main(int argc, char** argv) {
@@ -12,10 +12,10 @@ int main(int argc, char** argv) {
     HelloClass h;
     h.SayHello();
 
-    // // now we say hello from IUP
-    // IupOpen(&argc, &argv);
-    // IupMessage("Hello IUP", "Hello World from IUP!! :)");
-    // IupClose();
+    // now we say hello from IUP
+    IupOpen(&argc, &argv);
+    IupMessage("Hello IUP", "Hello World from IUP!! :)");
+    IupClose();
 
     return 0;
 }
