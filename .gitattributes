@@ -1,2 +1,2 @@
-vendor/* linguist-vendored 
-lib/include/iup/* linguist-vendored
+vendor/** linguist-vendored=true
+vendor/CMakeLists.txt linguist-vendored=false
