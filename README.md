@@ -4,9 +4,10 @@
 Minimal project to get started with CMake.
 
 ### Currently covers:   
-- one executable
+- one executable target
+- one library target
+- third-party library ("imported" lib) - uses the IUP library: <https://www.tecgraf.puc-rio.br/iup/> - see [IUP_LICENSE.md](vendor/iup/IUP_LICENSE.md)
 - subdirectories
-- third-party libraries ("imported" lib) - uses the IUP library: <https://www.tecgraf.puc-rio.br/iup/> - see IUP_LICENSE.md
 
 --- 
 ### Usage
@@ -17,14 +18,14 @@ For simplicity, 64-bit IUP binary libs are included in this repo for Windows and
 mkdir build
 cd build
 cmake -G "MinGW Makefiles" ..
-cmake --build .
+cmake --build . -j
 ```
 
 #### Windows - MSVC / Visual Studio
 ```
 mkdir build
 cd build
-cmake -G "Visual Studio 16 2019" -A x64 ..
+cmake -G "Visual Studio 17 2022" -A x64 ..
 cmake --build .
 ```
 
@@ -33,7 +34,7 @@ cmake --build .
 mkdir build
 cd build
 cmake -G "Unix Makefiles" ..
-cmake --build .
+cmake --build . -j
 ```
 
 
