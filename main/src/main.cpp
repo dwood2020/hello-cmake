@@ -1,6 +1,5 @@
 #include <iostream>
 #include "HelloClass.h"
-
 #include "iup/iup.h"
 
 
