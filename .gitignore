@@ -1,4 +1,3 @@
-build
-.vscode
-Makefile
+build/
+.vscode/
 .vs/
