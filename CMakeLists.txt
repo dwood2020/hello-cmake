@@ -13,6 +13,14 @@ project(hello-cmake
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+# Just a message to make sure the build target architecture is correct.
+if (${CMAKE_SIZEOF_VOID_P} STREQUAL "4")
+    message("Attempting 32-bit build.")
+elseif(${CMAKE_SIZEOF_VOID_P} STREQUAL "8")
+    message("Attempting 64-bit build.")
+endif()
+
+
 # Introduce the targets.
 set(MAIN_TARGET ${CMAKE_PROJECT_NAME})
 set(LIB_HELLO_TARGET hello)

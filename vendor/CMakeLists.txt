@@ -28,4 +28,6 @@ elseif(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
         INTERFACE_LINK_LIBRARIES "ole32;comctl32"
         INTERFACE_COMPILE_DEFINITIONS "/NODEFAULTLIB:LIBCMT"    # Avoid LNK4098
     )
+else()
+    message(FATAL_ERROR "Unknown compiler - cannot link IUP library.")
 endif()
